@@ -1,0 +1,154 @@
+@font-face {
+  font-family: "Piston Race Free Vertion";
+  src: url(../assets/fonts/PistonRaceFreeVertionItalic.ttf);
+}
+
+html {
+  font-family: "Piston Race Free Vertion";
+  cursor: default;
+}
+
+.wrapper {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.button {
+  position: relative;
+
+  height: fit-content;
+  float: left;
+
+  font-family: arial;
+  text-transform: uppercase;
+  color: #fff;
+
+  outline: none;
+  user-select: none;
+  cursor: pointer;
+
+  .button__label {
+    position: inherit;
+    z-index: 1;
+
+    padding: 10px;
+    display: inline-block;
+  }
+
+  &:hover:not(:disabled) {
+    .button__icon {
+      &:before, &:after{
+        width: 100%;
+      }
+
+      span {
+        &:before, &:after {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.9);
+  }
+
+  &:disabled {
+    color: #808080;
+
+    .button__icon {
+      &:before, &:after{
+        background: #808080;
+      }
+  
+      span{
+        &:before, &:after{
+          background: #808080;
+        }
+      }
+    }
+  }
+
+  .button__label {
+    padding: 10px 22px;
+  }
+
+  .button__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    transform: skew(-40deg, 0deg);
+
+    transition: all 0.2s;
+
+    &:before, &:after{
+      content: '';
+      position: absolute;
+
+      height: 1px;
+      width: 30px;
+      display: block;
+
+      background: #f0202f;
+
+      transition: width 0.2s;
+    }
+
+    &:before{
+      left: 0;
+      top: 0;
+    }
+
+    &:after{
+      right: 0;
+      bottom: 0;
+    }
+
+    span{
+      &:before, &:after{
+        content: '';
+        background: #f0202f;
+        position: absolute;
+        display: block;
+        width: 2px;
+        height: 30px;
+        transition: height 0.2s;
+      }
+
+      &:before{
+        left: 0;
+        top: 0;
+      }
+      
+      &:after{
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.winner-message {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba($color: #000000, $alpha: 0.5);
+
+  font-size: 3rem;
+  color: #ffd700;
+  text-align: center;
+  text-shadow: 0 0 20px #ff0000;
+}

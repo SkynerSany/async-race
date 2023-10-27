@@ -1,0 +1,76 @@
+.road {
+  position: relative;
+
+  height: 100px;
+
+  border-bottom: 3px dashed #ffffff;
+  border-top: 3px dashed #ffffff;
+  background-color: #000000;
+  overflow: hidden;
+
+  &:first-child {
+    border-top: 3px dashed #ffffff;
+  }
+}
+
+.road__start {
+  position: absolute;
+
+  height: 100%;
+  width: 200px;
+  display: grid;
+  grid-template-columns: 30px auto 45px;
+
+  color: #ffffff;
+
+  border-right: 3px solid #ffffff;
+}
+
+.car-id {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.car-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  writing-mode: vertical-rl;
+  text-align: center;
+}
+
+.car-box {
+  border-right: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
+}
+
+.car {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  
+  height: 100%;
+  width: 117px;
+  margin-left: 33px;
+
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
+}
+
+.road__finish {
+  position: absolute;
+  right: 140px;
+  top: 0;
+
+  height: 100%;
+  width: 20px;
+
+  background-image: url(../../assets/finishLine.svg);
+  background-size: contain;
+}

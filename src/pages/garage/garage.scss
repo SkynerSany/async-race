@@ -1,0 +1,36 @@
+.track__cars-count {
+  text-align: center;
+
+  font-size: 2rem;
+}
+
+.track {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  background-color: #000000;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.track__cars-count {
+  font-size: 2.5rem;
+}
+
+.not-found {
+  height: 100px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+  color: #ffffff;
+
+  background-color: #000000;
+
+  &.show {
+    display: flex;
+  }
+}

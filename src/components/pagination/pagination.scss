@@ -1,0 +1,22 @@
+.pagination {
+  height: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 130px);
+  gap: 30px;
+
+  &.wrapper {
+    margin-top: 20px;
+  }
+}
+
+.pagination__btn {
+  visibility: hidden;
+
+  .button__label {
+    color: #000000;
+  }
+
+  &.show {
+    visibility: visible;
+  }
+}

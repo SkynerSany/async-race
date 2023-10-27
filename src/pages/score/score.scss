@@ -1,0 +1,41 @@
+.score-container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.score-title {
+  font-size: 2.5rem;
+}
+
+.current-page {
+  align-self: flex-start;
+
+  font-size: 1.8rem;
+}
+
+.score-table {
+  padding: 20px;
+  background-color: #000000;
+}
+
+.score-table__row-body {
+  display: flex;
+  flex-direction: column;
+
+  color: #ffffff;
+}
+
+.score-table__row-header {
+  color: #ffa500;
+  text-transform: capitalize;
+  user-select: none;
+
+  p {
+    height: 40px;
+    border: 1px dotted #ffffff;
+
+    &[data-sort] {
+      cursor: pointer;
+    }
+  }
+}
