@@ -7,7 +7,7 @@ import {
   StatusType
 } from "../app/interfaces";
 
-const BASE_URL = 'http://127.0.0.1:4000/async-race/';
+const BASE_URL = 'https://maroon-snail-coat.cyclic.app/async-race/';
 const GARAGE = 'garage/';
 const ENGINE = 'engine/';
 const WINNERS = 'winners/';
